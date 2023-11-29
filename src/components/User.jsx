@@ -12,7 +12,7 @@ const User = () => {
     if (error) return <div>Error: {error}</div>;
 
     return (
-        <div className="w-[65%] h-[65%] pt-16 m-32 text-center bg-slate-100 border-r-2 border-slate-300 border-b-2 shadow-md">
+        <div className="w-[65%] py-32 m-32 text-center bg-slate-100 border-r-2 border-slate-300 border-b-2 shadow-md">
             <div className="flex flex-col items-center justify-center">
                 <img 
                 src={result.picture.large}
@@ -25,7 +25,7 @@ const User = () => {
                 onClick={() => fetchData()}
                 >Refresh</button>
 
-                <div className="group pt-4">
+                <div className="flex flex-col pt-4">
                 <p className="text-2xl font-sans pt-2 text-gray-600">My name is <span className='text-purple-600'>{result.name.first + " " + result.name.last}</span></p>
                 <p className="text-2xl font-sans pt-2 text-gray-600">My email address is <span className='text-purple-600'>{result.email}</span></p>
                 <p className="text-2xl font-sans pt-2 text-gray-600">I am from <span className='text-purple-600'>{result.location.country}</span></p>
